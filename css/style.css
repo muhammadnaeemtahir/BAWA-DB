@@ -1,0 +1,12 @@
+/* default css & reset */
+
+:root {
+    --color-primary: #1E4387;
+}
+
+/* start: backgrounds */
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+/* end: backgrounds */
