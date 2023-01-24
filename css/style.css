@@ -1,7 +1,18 @@
+/* Inter font - FW [500] */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
 /* default css & reset */
 
 :root {
+    --font-family-primary: 'Inter', sans-serif;
     --color-primary: #1E4387;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 /* start: backgrounds */
