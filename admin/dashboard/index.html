@@ -20,12 +20,109 @@
 </head>
 
 <body>
-    <div class="container-fluid g-0">
+    <div class="container-fluid bg-alice-blue g-0">
+        <!-- sidenav mobile -->
+        <nav class="navbar d-md-none d-block">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Welcome, Amann Jhamb</a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <img src="../../assets/logos/logo.svg" alt="" class="img-fluid">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./index.html">
+                                    <img src="../../assets/icons/home.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Dashboard</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./contacts.html">
+                                    <img src="../../assets/icons/users.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Contacts</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./permissions.html">
+                                    <img src="../../assets/icons/target.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Permissions</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./services.html">
+                                    <img src="../../assets/icons/settings.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Services</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./roles.html">
+                                    <img src="../../assets/icons/user.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Roles</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./visas.html">
+                                    <img src="../../assets/icons/file.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Visas</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="#">
+                                    <img src="../../assets/icons/user-check.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Users</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./college-and-institutes.html">
+                                    <img src="../../assets/icons/book-open.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">College/ Institutes</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./appointments.html">
+                                    <img src="../../assets/icons/calendar.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Appointments</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./document-expiry.html">
+                                    <img src="../../assets/icons/x-circle.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Document Expiry</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./college-enrollments.html">
+                                    <img src="../../assets/icons/file-plus.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">College Enrollments</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./reminders-and-followups.html">
+                                    <img src="../../assets/icons/bell.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Reminders/ Followups</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./finances.html">
+                                    <img src="../../assets/icons/dollar-sign.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Finance</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./refferals/html">
+                                    <img src="../../assets/icons/refresh-cw.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Referrals</span></a>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="">
+                            <button class="btn btn-outline-dark w-100 fw-bold">Logout <img
+                                    src="../../assets/icons/power.svg" alt="" class="img-fluid"></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
         <div class="row g-0">
+
 
             <!-- sidenav -->
             <div class="col-md-3 d-md-block d-none">
-                <div class="p-4 bg-white">
+                <div class="p-4 bg-white h-100">
                     <aside>
                         <nav class="row g-0 sidenav">
                             <div class="col-12">
@@ -117,8 +214,199 @@
 
             <!-- content -->
             <div class="col-md-9">
-                <div class="bg-alice-blue" style="min-height: 100%;">
-                    
+                <div class="p-md-5 p-3 h-100">
+                    <div class="content-header mb-5">
+
+                        <div class="d-md-block d-none">
+                            <div class="row mb-3">
+                                <div class="col-9">
+                                    <h3>Welcome, Amann Jhamb!</h3>
+                                </div>
+                                <div class="col-3">
+                                    <div class="text-end">
+                                        <button class="btn fw-bold">Logout <img src="../../assets/icons/power.svg"
+                                                alt="" class="img-fluid"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- search filter -->
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input type="search" name="search_filter" class="form-control p-2" id=""
+                                            placeholder="Search by Name or Mobile No.">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-primary w-100 p-2" type="submit">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="content-body">
+
+                        <!-- reminders & followups -->
+                        <section class="mb-5">
+                            <h4 class="border-start border-3 border-warning ps-2 mb-md-5">Reminders/ Followups</h4>
+                            <div class="table-responsive">
+                                <table class="table border bg-white">
+                                    <thead class="bg-info">
+                                        <th class="text-nowrap">Name</th>
+                                        <th class="text-nowrap">Agent</th>
+                                        <th class="text-nowrap text-center">Followup Date Time</th>
+                                        <th class="text-nowrap">Followup Note</th>
+                                        <th class="text-nowrap text-center">Action</th>
+                                    </thead>
+
+                                    <tbody>
+                                        <td>Kamini</td>
+                                        <td>Manmir Singh Bawa</td>
+                                        <td class="text-center">06-02-2023 13:00</td>
+                                        <td>TEST</td>
+                                        <td class="text-center">
+                                            <button class="btn px-0"><img src="../../assets/icons/eye.svg" alt=""
+                                                    class="img-fluid"></button>
+                                            <button class="btn px-0"><img src="../../assets/icons/trash.svg" alt=""
+                                                    class="img-fluid"></button>
+                                        </td>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Upcoming Expiry (60 Days) -->
+                        <section class="mb-5">
+                            <h4 class="border-start border-3 border-warning ps-2 mb-md-5">Upcoming Expiry (60 Days)</h4>
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item me-3" role="presentation">
+                                    <button class="nav-link text-nowrap px-0 active" id="pills-visa-expiry-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-visa-expiry" type="button"
+                                        role="tab" aria-controls="pills-visa-expiry" aria-selected="true">Visa Expiry
+                                        <span class="text-primary">(20)</span></button>
+                                </li>
+                                <li class="nav-item me-3" role="presentation">
+                                    <button class="nav-link text-nowrap px-0" id="pills-ielts-expiry-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-ielts-expiry" type="button"
+                                        role="tab" aria-controls="pills-ielts-expiry" aria-selected="false">IELTS Expiry
+                                        <span class="text-primary">(10)</span></button>
+                                </li>
+                                <li class="nav-item me-3" role="presentation">
+                                    <button class="nav-link text-nowrap px-0" id="pills-naati-expiry-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-naati-expiry" type="button"
+                                        role="tab" aria-controls="pills-naati-expiry" aria-selected="false">NAATI Expiry
+                                        <span class="text-primary">(5)</span></button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-visa-expiry" role="tabpanel"
+                                    aria-labelledby="pills-visa-expiry-tab" tabindex="0">
+                                    <div class="table-responsive">
+                                        <table class="table border bg-white">
+                                            <thead class="bg-info">
+                                                <th class="text-nowrap">Name</th>
+                                                <th class="text-nowrap">Mobile</th>
+                                                <th class="text-nowrap">Visa Type</th>
+                                                <th class="text-nowrap">Expiry</th>
+                                                <th class="text-nowrap text-center">Action</th>
+                                            </thead>
+
+                                            <tbody>
+                                                <td>Kamini</td>
+                                                <td>7009079826</td>
+                                                <td class="">Bridging A - 10</td>
+                                                <td>12-01-2023</td>
+                                                <td class="text-center">
+                                                    <button class="btn px-0"><img src="../../assets/icons/edit.svg"
+                                                            alt="" class="img-fluid"></button>
+                                                </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-ielts-expiry" role="tabpanel"
+                                    aria-labelledby="pills-ielts-expiry-tab" tabindex="0">
+                                    <table class="table border bg-white">
+                                        <thead class="bg-info">
+                                            <th class="text-nowrap">Name</th>
+                                            <th class="text-nowrap">Mobile</th>
+                                            <th class="text-nowrap">IELTS Type</th>
+                                            <th class="text-nowrap">Expiry</th>
+                                            <th class="text-nowrap text-center">Action</th>
+                                        </thead>
+
+                                        <tbody>
+                                            <td>Kamini</td>
+                                            <td>7009079826</td>
+                                            <td class="">Bridging A - 10</td>
+                                            <td>12-01-2023</td>
+                                            <td class="text-center">
+                                                <button class="btn px-0"><img src="../../assets/icons/edit.svg" alt=""
+                                                        class="img-fluid"></button>
+                                            </td>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="pills-naati-expiry" role="tabpanel"
+                                    aria-labelledby="pills-naati-expiry-tab" tabindex="0">
+                                    <table class="table border bg-white">
+                                        <thead class="bg-info">
+                                            <th class="text-nowrap">Name</th>
+                                            <th class="text-nowrap">Mobile</th>
+                                            <th class="text-nowrap">NAATI Type</th>
+                                            <th class="text-nowrap">Expiry</th>
+                                            <th class="text-nowrap text-center">Action</th>
+                                        </thead>
+
+                                        <tbody>
+                                            <td>Kamini</td>
+                                            <td>7009079826</td>
+                                            <td class="">Bridging A - 10</td>
+                                            <td>12-01-2023</td>
+                                            <td class="text-center text-nowrap">
+                                                <button class="btn px-0"><img src="../../assets/icons/edit.svg" alt=""
+                                                        class="img-fluid"></button>
+                                            </td>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Finance Reminders -->
+                        <section class="mb-5">
+                            <h4 class="border-start border-3 border-warning ps-2 mb-md-5">Finance Reminders</h4>
+                            <div class="table-responsive">
+                                <table class="table border bg-white">
+                                    <thead class="bg-info">
+                                        <th class="text-nowrap">Name</th>
+                                        <th class="text-nowrap">Balance</th>
+                                        <th class="text-nowrap">Pending</th>
+                                        <th class="text-nowrap text-center">Next Paydate</th>
+                                        <th class="text-nowrap text-center">Action</th>
+                                    </thead>
+
+                                    <tbody>
+                                        <td>Kamini</td>
+                                        <td>Manmir Singh Bawa</td>
+                                        <td class="text-center">06-02-2023 13:00</td>
+                                        <td class="text-center">12-01-2023</td>
+                                        <td class="text-center">
+                                            <button class="btn px-0"><img src="../../assets/icons/plus.svg" alt=""
+                                                    class="img-fluid"></button>
+                                            <button class="btn px-0"><img src="../../assets/icons/eye.svg" alt=""
+                                                    class="img-fluid"></button>
+                                            <button class="btn px-0"><img src="../../assets/icons/trash.svg" alt=""
+                                                    class="img-fluid"></button>
+                                        </td>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
