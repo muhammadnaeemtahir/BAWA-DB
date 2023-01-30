@@ -47,6 +47,12 @@ body {
 
 /* end: backgrounds */
 
+/* start: text */
+.text-warning{
+    color: var(--color-warning) !important;
+}
+/* end: text */
+
 /* start: buttons */
 .btn-warning {
     background-color: var(--color-warning) !important;
@@ -104,10 +110,10 @@ body {
     border-radius: 4px;
 }
 
-/* .additional_notes_button {
+.additional_notes_button {
     bottom: 30px;
     right: 4%;
-} */
+}
 
 /* responsive */
 
