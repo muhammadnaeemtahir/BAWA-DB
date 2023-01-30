@@ -18,6 +18,7 @@ body {
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.5rem;
+    background-color: var(--color-alice-blue);
 }
 
 :is(.rounded) {
@@ -90,7 +91,29 @@ body {
     border-radius: unset;
 }
 
-.nav.nav-pills{
-    flex-wrap: nowrap;
-    overflow-x: scroll;
+.pagination {
+    --bs-pagination-bg: unset;
+    --bs-pagination-border-color: unset;
+    --bs-pagination-disabled-bg: unset;
+}
+
+.pagination .active>.page-link {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    border: 2px solid var(--color-info);
+    border-radius: 4px;
+}
+
+/* .additional_notes_button {
+    bottom: 30px;
+    right: 4%;
+} */
+
+/* responsive */
+
+@media (max-width: 768px) {
+    .nav.nav-pills {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
 }
