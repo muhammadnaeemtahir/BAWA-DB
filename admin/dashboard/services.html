@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Transaction Details</title>
+    <title>Dashboard | Services</title>
 
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -109,7 +109,7 @@
                             </li>
                         </ul>
                         <form class="d-flex mt-3" role="">
-                            <button class="btn btn-outline-dark w-100 fw-bold">Logout <img
+                            <button class="btn btn-outline-dark w-100 fw-bold">Logout<img
                                     src="../../assets/icons/power.svg" alt="" class="img-fluid"></button>
                         </form>
                     </div>
@@ -140,7 +140,7 @@
                                             <span class="align-bottom">Dashboard</span></a>
                                     </li>
                                     <li class="nav-item mb-3">
-                                        <a class="nav-link px-0 active" href="./contacts.html">
+                                        <a class="nav-link px-0" href="./contacts.html">
                                             <img src="../../assets/icons/users.svg" alt="" class="img-fluid me-2">
                                             <span class="align-bottom">Contacts</span></a>
                                     </li>
@@ -150,7 +150,7 @@
                                             <span class="align-bottom">Permissions</span></a>
                                     </li>
                                     <li class="nav-item mb-3">
-                                        <a class="nav-link px-0" href="./services.html">
+                                        <a class="nav-link px-0 active" href="./services.html">
                                             <img src="../../assets/icons/settings.svg" alt="" class="img-fluid me-2">
                                             <span class="align-bottom">Services</span></a>
                                     </li>
@@ -234,121 +234,157 @@
                     </div>
 
                     <div class="content-body">
-                        <!-- floating button/ additional notes -->
-                        <div class="position-fixed additional_notes_button">
-                            <button class="btn btn-warning rounded p-3" type="button" data-bs-toggle="modal"
-                                data-bs-target="#additionalNotes"><img src="../../assets/icons/file-text.svg" alt=""
-                                    class="img-fluid"> Additional
-                                Notes</button>
 
-                            <!-- modal  -->
-                            <div class="modal fade" id="additionalNotes" tabindex="-1"
-                                aria-labelledby="additionalNotesLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg modal-dialog-scrollable">
-                                    <div class="modal-content border-0">
-                                        <div class="modal-header bg-alice-blue border-0">
-                                            <h1 class="modal-title fs-5 fw-bold" id="additionalNotesLabel">Add New
-                                                Contact
-                                            </h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body mb-5 border-0">
-                                            <div class="bg-light rounded p-3 mb-5">
-                                                <div class="row">
-                                                    <div class="col-9">
-                                                        <p class="fw-bold">TR 485 Query Explained Process Will Come back
-                                                            next week to submit docs for TR File processing</p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p class="fw-bold text-warning">31-12-2022 08:19</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-9">
-                                                        <p class="fw-bold">Call from amann - Pls call tor</p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p class="fw-bold text-warning">31-12-2022 08:19</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row border-0 p-3">
-                                            <div class="col-md-9">
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control p-3 rounded"
-                                                        placeholder="Enter Notes">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="mb-3">
-                                                    <button class="btn btn-primary p-3 rounded w-100 bg-light">Save
-                                                        Notes</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- View Transaction Details -->
+                        <!-- View Contacts -->
                         <section class="mb-5">
-                            <div class="row flex-md-row flex-column-reverse mb-3">
-                                <div class="col-md-10">
-                                    <h4 class="border-start border-3 border-warning ps-2 mb-md-5">View Transaction
-                                        Details</h4>
+                            <div class="row g-0 align-items-end flex-md-row flex-column-reverse">
+                                <div class="col-md-6">
+                                    <h4 class="border-start border-3 border-warning ps-2 mb-md-5">Services</h4>
                                 </div>
-                                <div class="col-md-2">
-                                    <div class="text-md-center text-start mb-md-3 mb-3">
-                                        <a href="#" onclick="history.back()"><img
-                                                src="../../assets/icons/arrow-left.svg" class="img-fluid" alt=""> Go
-                                            Back</a>
+                                <div class="col-md-6">
+                                    <div class="mb-md-3 mb-5">
+                                        <form action="#" method="post">
+                                            <div class="row align-items-center">
+                                                <div class="col-md-5"></div>
+                                                <div class="col-md-7">
+                                                    <div class="mb-3">
+                                                        <button class="btn btn-primary p-3 rounded w-100" type="button"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#addNewServiceModal"><img
+                                                                src="../../assets/icons/plus-white.svg" alt=""
+                                                                class="img-fluid me-2"> Add New Service</button>
+
+                                                        <div class="modal fade" id="addNewServiceModal" tabindex="-1"
+                                                            aria-labelledby="addNewServiceModalLabel"
+                                                            aria-hidden="true">
+                                                            <div class="modal-dialog modal-lg">
+                                                                <div class="modal-content border-0">
+                                                                    <div class="modal-header bg-alice-blue border-0">
+                                                                        <h1 class="modal-title fs-5 fw-bold"
+                                                                            id="addNewServiceModalLabel">Add New Service
+                                                                        </h1>
+                                                                        <button type="button" class="btn-close"
+                                                                            data-bs-dismiss="modal"
+                                                                            aria-label="Close"></button>
+                                                                    </div>
+                                                                    <div class="modal-body my-4 border-0">
+                                                                        <form>
+                                                                            <div class="col-12">
+                                                                                <div class="mb-3">
+                                                                                    <label for="mobile_number"
+                                                                                        class="col-form-label">Service
+                                                                                        Name</label>
+                                                                                    <input type="text"
+                                                                                        placeholder="Enter Service Name"
+                                                                                        class="form-control p-3 rounded bg-light"
+                                                                                        id="">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-12">
+                                                                                <div class="mb-3">
+                                                                                    <label for="mobile_number"
+                                                                                        class="col-form-label">Description</label>
+                                                                                    <textarea name=""
+                                                                                        class="form-control p-3 rounded bg-light"
+                                                                                        id="" cols="30" rows="5"
+                                                                                        placeholder="Enter Service Description"></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                    <div
+                                                                        class="modal-footer border-0 justify-content-start">
+                                                                        <div class="mb-3">
+                                                                            <button type="button"
+                                                                                class="btn btn-primary p-3 rounded">Add
+                                                                                Service</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-3">
-                                    <p>Transaction Name</p>
-                                    <p class="fw-bold">Test</p>
-                                </div>
-                                <div class="col-md-2">
-                                    <p>Created Date</p>
-                                    <p class="fw-bold">18-01-2023</p>
-                                </div>
-                                <div class="col-md-2">
-                                    <p>Total Balance</p>
-                                    <p class="fw-bold"><span class="text-warning">$2500</span></p>
-                                </div>
-                                <div class="col-md-2">
-                                    <p>Pending Balance</p>
-                                    <p class="fw-bold"><span class="text-warning">$2500</span></p>
                                 </div>
                             </div>
                             <div class="table-responsive">
                                 <table class="table border bg-white">
                                     <thead class="bg-info">
                                         <tr>
+                                            <th class="text-nowrap">S.No.</th>
                                             <th class="text-nowrap">Name</th>
-                                            <th class="text-nowrap">Agent</th>
-                                            <th class="text-nowrap text-center">Followup Date Time</th>
-                                            <th class="text-nowrap">Followup Note</th>
-                                            <th class="text-nowrap text-center">Action</th>
+                                            <th class="text-nowrap">Status</th>
+                                            <th class="text-nowrap">Action</th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         <tr>
-                                            <td>Kamini</td>
-                                            <td>Manmir Singh Bawa</td>
-                                            <td class="text-center">06-02-2023 13:00</td>
-                                            <td>TEST</td>
-                                            <td class="text-center">
-                                                <button class="btn px-0"><img src="../../assets/icons/eye.svg" alt=""
+                                            <td>1</td>
+                                            <td>Initial Consultation</td>
+                                            <td>Active</td>
+                                            <td>
+                                                <button class="btn p-0" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#updateNewServiceModal"><img
+                                                        src="../../assets/icons/edit.svg" alt=""
                                                         class="img-fluid"></button>
-                                                <button class="btn px-0"><img src="../../assets/icons/trash.svg" alt=""
+                                                <!-- modal -->
+                                                <div class="modal fade" id="updateNewServiceModal" tabindex="-1"
+                                                    aria-labelledby="updateNewServiceModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-lg">
+                                                        <div class="modal-content border-0">
+                                                            <div class="modal-header bg-alice-blue border-0">
+                                                                <h1 class="modal-title fs-5 fw-bold"
+                                                                    id="updateNewServiceModalLabel">Add New Service
+                                                                </h1>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body my-4 border-0">
+                                                                <form>
+                                                                    <div class="col-12">
+                                                                        <div class="mb-3">
+                                                                            <label for="mobile_number"
+                                                                                class="col-form-label">Service
+                                                                                Name</label>
+                                                                            <input type="text"
+                                                                                placeholder="Enter Service Name"
+                                                                                class="form-control p-3 rounded bg-light"
+                                                                                id="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="mb-3">
+                                                                            <label for="mobile_number"
+                                                                                class="col-form-label">Description</label>
+                                                                            <select
+                                                                                class="form-select p-3 rounded bg-light"
+                                                                                name="" id="">
+                                                                                <option value="active" selected>Active
+                                                                                </option>
+                                                                                <option value="inactive">Inactive
+                                                                                </option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer border-0 justify-content-start">
+                                                                <div class="mb-3">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary p-3 rounded">Update
+                                                                        Service</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <button class="btn p-0"><img src="../../assets/icons/trash.svg" alt=""
                                                         class="img-fluid"></button>
                                             </td>
                                         </tr>

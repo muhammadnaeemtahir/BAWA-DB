@@ -48,9 +48,10 @@ body {
 /* end: backgrounds */
 
 /* start: text */
-.text-warning{
+.text-warning {
     color: var(--color-warning) !important;
 }
+
 /* end: text */
 
 /* start: buttons */
@@ -114,6 +115,26 @@ body {
     bottom: 30px;
     right: 4%;
 }
+
+
+
+/* forms */
+.form-check-input:is(:focus) {
+    box-shadow: unset;
+    outline: unset;
+}
+
+.form-check-input {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--color-primary);
+}
+
+
+
 
 /* responsive */
 
