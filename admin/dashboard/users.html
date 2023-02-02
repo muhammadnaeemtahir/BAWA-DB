@@ -237,7 +237,81 @@
 
                         <!-- reminders & followups -->
                         <section class="mb-5">
-                            <h4 class="border-start border-3 border-warning ps-2 mb-md-5">Users</h4>
+
+                            <div class="row g-0 align-items-end flex-md-row flex-column-reverse">
+                                <div class="col-md-6">
+                                    <h4 class="border-start border-3 border-warning ps-2 mb-md-5">Users</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-md-3 mb-5">
+                                        <form action="#" method="post">
+                                            <div class="row align-items-center">
+                                                <div class="col-md-5"></div>
+                                                <div class="col-md-7">
+                                                    <div class="mb-3">
+                                                        <button class="btn btn-primary p-3 rounded w-100" type="button"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#addNewUserModal"><img
+                                                                src="../../assets/icons/plus-white.svg" alt=""
+                                                                class="img-fluid me-2"> Add New User</button>
+
+                                                        <div class="modal fade" id="addNewUserModal" tabindex="-1"
+                                                            aria-labelledby="addNewUserModalLabel"
+                                                            aria-hidden="true">
+                                                            <div class="modal-dialog modal-lg">
+                                                                <div class="modal-content border-0">
+                                                                    <div class="modal-header bg-alice-blue border-0">
+                                                                        <h1 class="modal-title fs-5 fw-bold"
+                                                                            id="addNewUserModalLabel">Add New Service
+                                                                        </h1>
+                                                                        <button type="button" class="btn-close"
+                                                                            data-bs-dismiss="modal"
+                                                                            aria-label="Close"></button>
+                                                                    </div>
+                                                                    <div class="modal-body my-4 border-0">
+                                                                        <form>
+                                                                            <div class="col-12">
+                                                                                <div class="mb-3">
+                                                                                    <label for="mobile_number"
+                                                                                        class="col-form-label">Service
+                                                                                        Name</label>
+                                                                                    <input type="text"
+                                                                                        placeholder="Enter Service Name"
+                                                                                        class="form-control p-3 rounded bg-light"
+                                                                                        id="">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-12">
+                                                                                <div class="mb-3">
+                                                                                    <label for="mobile_number"
+                                                                                        class="col-form-label">Description</label>
+                                                                                    <textarea name=""
+                                                                                        class="form-control p-3 rounded bg-light"
+                                                                                        id="" cols="30" rows="5"
+                                                                                        placeholder="Enter Service Description"></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                    <div
+                                                                        class="modal-footer border-0 justify-content-start">
+                                                                        <div class="mb-3">
+                                                                            <button type="button"
+                                                                                class="btn btn-primary p-3 rounded">Add
+                                                                                Service</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="table-responsive">
                                 <table class="table border bg-white">
                                     <thead class="bg-info">

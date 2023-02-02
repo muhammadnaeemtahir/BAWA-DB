@@ -6,6 +6,7 @@
 :root {
     --font-family-primary: 'Inter', sans-serif;
     --color-white: #FFFFFF;
+    --color-gray: #EEEEEE;
     --color-dark: #000000;
     --color-primary: #1E4387;
     --color-warning: #F36A22;
@@ -64,6 +65,13 @@ body {
 .btn-primary {
     background-color: var(--color-primary) !important;
     border-color: var(--color-primary) !important;
+}
+
+.bg-booking {
+    background-color: var(--color-info);
+    background-image: url('../assets/backgrounds/bg-booking.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* end: buttons */
@@ -133,6 +141,42 @@ body {
     background-color: var(--color-primary);
 }
 
+
+
+/* start: vanilla callender */
+.vanilla-calendar-header {
+    background-color: var(--color-gray);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.vanilla-calendar-week__day,
+.vanilla-calendar-week__day_weekend {
+    color: var(--color-dark);
+}
+
+.vanilla-calendar-day__btn_today {
+    background-color: transparent;
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+}
+
+.vanilla-calendar-day__btn {
+    background-color: transparent;
+}
+
+.vanilla-calendar-day__btn_selected,
+.vanilla-calendar-day__btn:is(:active, :focus, :hover),
+.vanilla-calendar-day__btn.vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.vanilla-calendar-day__btn_weekend {
+    color: var(--color-dark);
+}
+
+/* end: vanilla callender */
 
 
 
