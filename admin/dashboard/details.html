@@ -4,12 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | User Details</title>
+    <title>Dashboard | Details</title>
 
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- vanilla calender -->
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.css
+    " rel="stylesheet">
 
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -140,7 +144,7 @@
                                             <span class="align-bottom">Dashboard</span></a>
                                     </li>
                                     <li class="nav-item mb-3">
-                                        <a class="nav-link px-0 active" href="./contacts.html">
+                                        <a class="nav-link px-0" href="./contacts.html">
                                             <img src="../../assets/icons/users.svg" alt="" class="img-fluid me-2">
                                             <span class="align-bottom">Contacts</span></a>
                                     </li>
@@ -175,7 +179,7 @@
                                             <span class="align-bottom">College/ Institutes</span></a>
                                     </li>
                                     <li class="nav-item mb-3">
-                                        <a class="nav-link px-0" href="./appointments.html">
+                                        <a class="nav-link px-0 active" href="./appointments.html">
                                             <img src="../../assets/icons/calendar.svg" alt="" class="img-fluid me-2">
                                             <span class="align-bottom">Appointments</span></a>
                                     </li>
@@ -301,35 +305,32 @@
                                     <div class="mb-3">
                                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link fw-bold active" id="pills-user-details-tab"
-                                                    data-bs-toggle="pill" data-bs-target="#pills-user-details"
-                                                    type="button" role="tab" aria-controls="pills-user-details"
-                                                    aria-selected="true">User
-                                                    Details</button>
+                                                <button class="nav-link fw-bold active" id="pills-personal-details-tab"
+                                                    data-bs-toggle="pill" data-bs-target="#pills-personal-details"
+                                                    type="button" role="tab" aria-controls="pills-personal-details"
+                                                    aria-selected="true">Personal Details</button>
                                             </li>
+
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link fw-bold" id="pills-otherDetails-tab"
+                                                    data-bs-toggle="pill" data-bs-target="#pills-otherDetails"
+                                                    type="button" role="tab" aria-controls="pills-otherDetails"
+                                                    aria-selected="false">Other Details</button>
+                                            </li>
+
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link fw-bold" id="pills-followup-tab"
                                                     data-bs-toggle="pill" data-bs-target="#pills-followup" type="button"
                                                     role="tab" aria-controls="pills-followup"
                                                     aria-selected="false">Follow-up/ Reminders</button>
                                             </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link fw-bold" id="pills-family-members-tab"
-                                                    data-bs-toggle="pill" data-bs-target="#pills-family-members"
-                                                    type="button" role="tab" aria-controls="pills-family-members"
-                                                    aria-selected="false">Family Members</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link fw-bold" id="pills-QA-tab" data-bs-toggle="pill"
                                                     data-bs-target="#pills-QA" type="button" role="tab"
                                                     aria-controls="pills-QA" aria-selected="false">Q&A</button>
                                             </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link fw-bold" id="pills-appointments-tab"
-                                                    data-bs-toggle="pill" data-bs-target="#pills-appointments"
-                                                    type="button" role="tab" aria-controls="pills-appointments"
-                                                    aria-selected="false">Appointments</button>
-                                            </li>
+
                                             <li class="nav-item" role="presentation">
                                                 <button class="nav-link fw-bold" id="pills-referred-tab"
                                                     data-bs-toggle="pill" data-bs-target="#pills-referred" type="button"
@@ -337,10 +338,10 @@
                                                     aria-selected="false">Referred By</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link fw-bold" id="pills-finance-tab"
-                                                    data-bs-toggle="pill" data-bs-target="#pills-finance" type="button"
-                                                    role="tab" aria-controls="pills-finance"
-                                                    aria-selected="false">Finance</button>
+                                                <button class="nav-link fw-bold" id="pills-link-profile-tab"
+                                                    data-bs-toggle="pill" data-bs-target="#pills-link-profile"
+                                                    type="button" role="tab" aria-controls="pills-link-profile"
+                                                    aria-selected="false">Link Profile</button>
                                             </li>
                                         </ul>
 
@@ -348,8 +349,8 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="mb-3">
-                                        <button class="btn btn-primary rounded p-3 w-100" type="button">Generate
-                                            CSA</button>
+                                        <button class="btn btn-primary rounded p-3 w-100" type="button">Save
+                                            Changes</button>
                                     </div>
                                 </div>
                             </div>
@@ -357,10 +358,11 @@
                                 <div class="col-md-11">
                                     <div class="row">
                                         <div class="tab-content" id="pills-tabContent">
-                                            <div class="tab-pane fade show active" id="pills-user-details"
-                                                role="tabpanel" aria-labelledby="pills-user-details-tab" tabindex="0">
+                                            <div class="tab-pane fade show active" id="pills-personal-details"
+                                                role="tabpanel" aria-labelledby="pills-personal-details-tab"
+                                                tabindex="0">
                                                 <form action="#" method="post">
-                                                    <div class="row">
+                                                    <div class="row mb-5">
                                                         <div class="col-md-4">
                                                             <div class="mb-3">
                                                                 <label for="given_name" class="form-label">Given
@@ -413,6 +415,92 @@
                                                                     placeholder="Enter address">
                                                             </div>
                                                         </div>
+                                                        <div class="col-md-4">
+                                                            <div class="mb-3">
+                                                                <label for="address" class="form-label">Service</label>
+                                                                <select name="" class="form-select rounded p-3 border-3"
+                                                                    id="">
+                                                                    <option value="1">Initial Consultation</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="mb-3">
+                                                                <label for="address" class="form-label">Appointment
+                                                                    Type</label>
+                                                                <select name="" class="form-select rounded p-3 border-3"
+                                                                    id="">
+                                                                    <option value="1">Telephone</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="mb-3">
+                                                                <label for="address" class="form-label">Appointment
+                                                                    Type</label>
+                                                                <div class="d-flex justify-content-between">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="flexRadioDefault"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Cash
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="flexRadioDefault"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Online
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <label for="" class="form-label">Schedule
+                                                                Appointment</label>
+                                                            <div class="border rounded bg-white w-75" id="calendar">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="mb-3">
+                                                                <label for="" class="form-label">Select Time</label>
+                                                                <div class="mb-3">
+                                                                    <button class="btn bg-white border" value="9"
+                                                                        type="button">09:00 AM</button>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <button class="btn bg-white border" value="9"
+                                                                        type="button">09:00 AM</button>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <button class="btn bg-white border" value="9"
+                                                                        type="button">09:00 AM</button>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <button class="btn bg-white border" value="9"
+                                                                        type="button">09:00 AM</button>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <button class="btn bg-white border" value="9"
+                                                                        type="button">09:00 AM</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="pills-otherDetails" role="tabpanel"
+                                                aria-labelledby="pills-otherDetails-tab" tabindex="0">
+                                                <form action="#" method="post">
+                                                    <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="mb-3">
                                                                 <label for="marita_status" class="form-label">Marita
@@ -555,6 +643,7 @@
                                                     </div>
                                                 </form>
                                             </div>
+
                                             <div class="tab-pane fade" id="pills-followup" role="tabpanel"
                                                 aria-labelledby="pills-followup-tab" tabindex="0">
                                                 <div class="table-responsive mb-5">
@@ -573,9 +662,68 @@
                                                                 <td>19-01-2023 18:00</td>
                                                                 <td>TEST</td>
                                                                 <td>
-                                                                    <a href="./user-details.html" class="btn px-0"><img
+                                                                    <button href="./user-details.html" type="button"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#followupModal"
+                                                                        class="btn px-0"><img
                                                                             src="../../assets/icons/eye.svg" alt=""
-                                                                            class="img-fluid"></a>
+                                                                            class="img-fluid"></button>
+
+                                                                    <!-- start: modal -->
+                                                                    <div class="modal fade" id="followupModal"
+                                                                        tabindex="-1"
+                                                                        aria-labelledby="followupModalLabel"
+                                                                        aria-hidden="true">
+                                                                        <div class="modal-dialog modal-lg">
+                                                                            <div class="modal-content border-0">
+                                                                                <div
+                                                                                    class="modal-header bg-alice-blue border-0">
+                                                                                    <h1 class="modal-title fs-5 fw-bold"
+                                                                                        id="followupModalLabel">
+                                                                                        Follow-up Details</h1>
+                                                                                    <button type="button"
+                                                                                        class="btn-close"
+                                                                                        data-bs-dismiss="modal"
+                                                                                        aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body my-4 border-0">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="mb-3">
+                                                                                                <p class="mb-0">Agent
+                                                                                                    Name</p>
+                                                                                                <p class="mb-0 fw-bold">
+                                                                                                    Rahul (MARN
+                                                                                                    4434345454)
+                                                                                                </p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="mb-3">
+                                                                                                <p class="mb-0">Follow
+                                                                                                    Up Date/Time</p>
+                                                                                                <p class="mb-0 fw-bold">
+                                                                                                    19 January 2023
+                                                                                                    18:00
+                                                                                                </p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="mb-3">
+                                                                                                <p class="mb-0">Follow
+                                                                                                    Up Note</p>
+                                                                                                <p class="mb-0 fw-bold">
+                                                                                                    TEST
+                                                                                                </p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- end: modal -->
                                                                     <button class="btn px-0"><img
                                                                             src="../../assets/icons/trash.svg" alt=""
                                                                             class="img-fluid"></button>
@@ -615,37 +763,8 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                            <div class="tab-pane fade" id="pills-family-members" role="tabpanel"
-                                                aria-labelledby="pills-family-members-tab" tabindex="0">
-                                                <div class="col-md-3">
-                                                    <button class="btn btn-primary p-3 rounded w-100">Link to Another
-                                                        Profile</button>
-                                                </div>
-                                                <div class="table-responsive mt-5">
-                                                    <table class="table bg-white">
-                                                        <thead class="bg-info">
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Mobile No.</th>
-                                                                <th>Your Relation</th>
-                                                                <th>Action</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Amann Jhamb</td>
-                                                                <td>0406649898</td>
-                                                                <td>Brother</td>
-                                                                <td>
-                                                                    <button class="btn px-0"><img
-                                                                            src="../../assets/icons/trash.svg" alt=""
-                                                                            class="img-fluid"></button>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
+
+
                                             <div class="tab-pane fade" id="pills-QA" role="tabpanel"
                                                 aria-labelledby="pills-QA-tab" tabindex="0">
                                                 <form action="#" method="post">
@@ -695,53 +814,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade" id="pills-appointments" role="tabpanel"
-                                                aria-labelledby="pills-appointments-tab" tabindex="0">
-                                                <form action="">
-                                                    <div class="row mb-5">
-                                                        <div class="col-md-6">
-                                                            <div class="mb-3">
-                                                                <label for="" class="form-label">Search
-                                                                    Appointment</label>
-                                                                <input type="text"
-                                                                    class="form-control border-3 rounded p-3"
-                                                                    placeholder="Enter Name, Email, Mobile" name=""
-                                                                    id="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                                <div class="table-responsive">
-                                                    <table class="table bg-white">
-                                                        <thead class="bg-info">
-                                                            <tr>
-                                                                <th>S.No.</th>
-                                                                <th>Name</th>
-                                                                <th>Email ID</th>
-                                                                <th>Mobile No.</th>
-                                                                <th>Appointment Schedule</th>
-                                                                <th>Service</th>
-                                                                <th>Action</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>1</td>
-                                                                <td>Kamini</td>
-                                                                <td>name@email.com</td>
-                                                                <td>76543274</td>
-                                                                <td>27-01-2023 10:00 AM</td>
-                                                                <td>Initial Consultation</td>
-                                                                <td>
-                                                                    <button class="btn"><img
-                                                                            src="../../assets/icons/eye.svg"
-                                                                            class="img-fluid" alt=""></button>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
+
                                             <div class="tab-pane fade" id="pills-referred" role="tabpanel"
                                                 aria-labelledby="pills-referred-tab" tabindex="0">
                                                 <form action="#" method="post">
@@ -843,18 +916,16 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                            <div class="tab-pane fade" id="pills-finance" role="tabpanel"
-                                                aria-labelledby="pills-finance-tab" tabindex="0">
+                                            <div class="tab-pane fade" id="pills-link-profile" role="tabpanel"
+                                                aria-labelledby="pills-link-profile-tab" tabindex="0">
                                                 <form action="" method="post">
                                                     <div class="row mb-5">
                                                         <div class="col-md-3">
                                                             <div class="mb-3">
                                                                 <button class="btn btn-primary w-100 p-3 rounded"
                                                                     type="button" data-bs-toggle="modal"
-                                                                    data-bs-target="#transactionModal"><img
-                                                                        src="../../assets/icons/plus-white.svg"
-                                                                        class="img-fluid" alt=""> Add
-                                                                    Transaction</button>
+                                                                    data-bs-target="#transactionModal">Link to Another
+                                                                    Profile</button>
 
                                                                 <div class="modal fade" id="transactionModal"
                                                                     tabindex="-1"
@@ -865,8 +936,8 @@
                                                                             <div
                                                                                 class="modal-header bg-alice-blue border-0">
                                                                                 <h1 class="modal-title fs-5 fw-bold"
-                                                                                    id="transactionModalLabel">Add
-                                                                                    Transaction</h1>
+                                                                                    id="transactionModalLabel">Link
+                                                                                    Account to Another Profile</h1>
                                                                                 <button type="button" class="btn-close"
                                                                                     data-bs-dismiss="modal"
                                                                                     aria-label="Close"></button>
@@ -877,61 +948,30 @@
                                                                                         <div class="col-12">
                                                                                             <div class="mb-3">
                                                                                                 <label for=""
-                                                                                                    class="form-label">Transaction
-                                                                                                    Name</label>
-                                                                                                <input type="text"
-                                                                                                    class="form-control p-3 rounded border-3"
-                                                                                                    placeholder="Enter Transaction Name">
+                                                                                                    class="form-label">Choose
+                                                                                                    Profile to Link
+                                                                                                    Account</label>
+                                                                                                <select name=""
+                                                                                                    class="form-select p-3 bg-light"
+                                                                                                    id="">
+                                                                                                    <option disabled
+                                                                                                        selected>Select
+                                                                                                        Profile</option>
+                                                                                                </select>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class="col-md-6">
+                                                                                        <div class="col-12">
                                                                                             <div class="mb-3">
                                                                                                 <label for=""
-                                                                                                    class="form-label">Total
-                                                                                                    Amount ($)</label>
-                                                                                                <input type="text"
-                                                                                                    class="form-control p-3 rounded border-3"
-                                                                                                    placeholder="Enter Total Amount">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <div class="mb-3">
-                                                                                                <label for=""
-                                                                                                    class="form-label">Pending
-                                                                                                    Amount ($)</label>
-                                                                                                <input type="text"
-                                                                                                    class="form-control bg-light p-3 rounded border-3"
-                                                                                                    placeholder="">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <div class="mb-3">
-                                                                                                <label for=""
-                                                                                                    class="form-label">Deposit
-                                                                                                    Amount ($)</label>
-                                                                                                <input type="text"
-                                                                                                    class="form-control p-3 rounded border-3"
-                                                                                                    placeholder="Enter Deposit Amount">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <div class="mb-3">
-                                                                                                <label for=""
-                                                                                                    class="form-label">Pay
-                                                                                                    Date</label>
-                                                                                                <input type="date"
-                                                                                                    class="form-control p-3 rounded border-3"
-                                                                                                    placeholder="">
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-md-6">
-                                                                                            <div class="mb-3">
-                                                                                                <label for=""
-                                                                                                    class="form-label">Next
-                                                                                                    Pending Date</label>
-                                                                                                <input type="date"
-                                                                                                    class="form-control p-3 rounded border-3"
-                                                                                                    placeholder="">
+                                                                                                    class="form-label">Relation</label>
+                                                                                                <select name=""
+                                                                                                    class="form-select p-3 bg-light"
+                                                                                                    id="">
+                                                                                                    <option disabled
+                                                                                                        selected>Select
+                                                                                                        Relation
+                                                                                                    </option>
+                                                                                                </select>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -941,8 +981,8 @@
                                                                                 class="modal-footer border-0 justify-content-start">
                                                                                 <div class="mb-3">
                                                                                     <button type="button"
-                                                                                        class="btn btn-primary p-3 rounded">Add
-                                                                                        to list</button>
+                                                                                        class="btn btn-primary p-3 rounded">Link
+                                                                                        Account</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -956,136 +996,18 @@
                                                     <table class="table bg-white border">
                                                         <thead class="bg-info">
                                                             <tr>
-                                                                <th>Sr.No.</th>
                                                                 <th>Name</th>
-                                                                <th>Deposit Date</th>
-                                                                <th>Balance</th>
-                                                                <th>Credit Amount</th>
-                                                                <th>Pending Balance</th>
+                                                                <th>Mobile</th>
+                                                                <th>Your Relation</th>
                                                                 <th>Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td>1</td>
                                                                 <td>Kamini</td>
-                                                                <td>18-01-2023</td>
-                                                                <td>$2500</td>
-                                                                <td>$2500</td>
-                                                                <td>$2500</td>
+                                                                <td>23456789</td>
+                                                                <td>Brother</td>
                                                                 <td>
-                                                                    <button class="btn px-0" type="button"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#updateTransactionModal"><img
-                                                                            src="../../assets/icons/edit.svg" alt=""
-                                                                            class="img-fluid"></button>
-
-                                                                    <!-- start: modal start -->
-                                                                    <div class="modal fade" id="updateTransactionModal"
-                                                                        tabindex="-1"
-                                                                        aria-labelledby="updateTransactionModalLabel"
-                                                                        aria-hidden="true">
-                                                                        <div class="modal-dialog modal-lg">
-                                                                            <div class="modal-content border-0">
-                                                                                <div
-                                                                                    class="modal-header bg-alice-blue border-0">
-                                                                                    <h1 class="modal-title fs-5 fw-bold"
-                                                                                        id="updateTransactionModalLabel">
-                                                                                        Update
-                                                                                        Transaction</h1>
-                                                                                    <button type="button"
-                                                                                        class="btn-close"
-                                                                                        data-bs-dismiss="modal"
-                                                                                        aria-label="Close"></button>
-                                                                                </div>
-                                                                                <div class="modal-body my-4 border-0">
-                                                                                    <form action="#" method="post">
-                                                                                        <div class="row">
-                                                                                            <div class="col-12">
-                                                                                                <div class="mb-3">
-                                                                                                    <label for=""
-                                                                                                        class="form-label">Transaction
-                                                                                                        Name</label>
-                                                                                                    <input type="text"
-                                                                                                        class="form-control p-3 rounded border-3"
-                                                                                                        placeholder="Enter Transaction Name">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="col-md-6">
-                                                                                                <div class="mb-3">
-                                                                                                    <label for=""
-                                                                                                        class="form-label">Total
-                                                                                                        Amount
-                                                                                                        ($)</label>
-                                                                                                    <input type="text"
-                                                                                                        class="form-control p-3 rounded border-3"
-                                                                                                        placeholder="Enter Total Amount">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="col-md-6">
-                                                                                                <div class="mb-3">
-                                                                                                    <label for=""
-                                                                                                        class="form-label">Pending
-                                                                                                        Amount
-                                                                                                        ($)</label>
-                                                                                                    <input type="text"
-                                                                                                        class="form-control bg-light p-3 rounded border-3"
-                                                                                                        placeholder="">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="col-md-6">
-                                                                                                <div class="mb-3">
-                                                                                                    <label for=""
-                                                                                                        class="form-label">Deposit
-                                                                                                        Amount
-                                                                                                        ($)</label>
-                                                                                                    <input type="text"
-                                                                                                        class="form-control p-3 rounded border-3"
-                                                                                                        placeholder="Enter Deposit Amount">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="col-md-6">
-                                                                                                <div class="mb-3">
-                                                                                                    <label for=""
-                                                                                                        class="form-label">Pay
-                                                                                                        Date</label>
-                                                                                                    <input type="date"
-                                                                                                        class="form-control p-3 rounded border-3"
-                                                                                                        placeholder="">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="col-md-6">
-                                                                                                <div class="mb-3">
-                                                                                                    <label for=""
-                                                                                                        class="form-label">Next
-                                                                                                        Pending
-                                                                                                        Date</label>
-                                                                                                    <input type="date"
-                                                                                                        class="form-control p-3 rounded border-3"
-                                                                                                        placeholder="">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </form>
-                                                                                </div>
-                                                                                <div
-                                                                                    class="modal-footer border-0 justify-content-start">
-                                                                                    <div class="mb-3">
-                                                                                        <button type="button"
-                                                                                            class="btn btn-primary p-3 rounded">Update
-                                                                                            to list</button>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!-- end: modal start -->
-
-
-                                                                    <a href="./view-transacton-details.html"
-                                                                        class="btn px-0"><img
-                                                                            src="../../assets/icons/eye.svg" alt=""
-                                                                            class="img-fluid"></a>
                                                                     <button class="btn px-0"><img
                                                                             src="../../assets/icons/trash.svg" alt=""
                                                                             class="img-fluid"></button>
@@ -1111,6 +1033,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.2.5/build/vanilla-calendar.min.js
+"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const calendar = new VanillaCalendar('#calendar');
+            calendar.init();
+        });
+    </script>
 </body>
 
 </html>
