@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Finances</title>
+    <title>Dashboard | College Enrollments</title>
 
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -68,7 +68,7 @@
                                     <span class="align-bottom">Visas</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link px-0" href="./users.html">
+                                <a class="nav-link px-0" href="#">
                                     <img src="../../assets/icons/user-check.svg" alt="" class="img-fluid me-2">
                                     <span class="align-bottom">Users</span></a>
                             </li>
@@ -185,7 +185,7 @@
                                             <span class="align-bottom">Document Expiry</span></a>
                                     </li>
                                     <li class="nav-item mb-3">
-                                        <a class="nav-link px-0" href="./college-enrollments.html">
+                                        <a class="nav-link px-0 active" href="./college-enrollments.html">
                                             <img src="../../assets/icons/file-plus.svg" alt="" class="img-fluid me-2">
                                             <span class="align-bottom">College Enrollments</span></a>
                                     </li>
@@ -195,7 +195,7 @@
                                             <span class="align-bottom">Reminders/ Followups</span></a>
                                     </li>
                                     <li class="nav-item mb-3">
-                                        <a class="nav-link px-0 active" href="./finances.html">
+                                        <a class="nav-link px-0" href="./finances.html">
                                             <img src="../../assets/icons/dollar-sign.svg" alt="" class="img-fluid me-2">
                                             <span class="align-bottom">Finance</span></a>
                                     </li>
@@ -215,7 +215,7 @@
             <!-- content -->
             <div class="col-md-9">
                 <div class="p-md-5 p-3 h-100">
-                    <div class="content-header mb-5">
+                    <div class="content-header mb-md-5">
 
                         <div class="d-md-block d-none">
                             <div class="row mb-3">
@@ -235,19 +235,16 @@
 
                     <div class="content-body">
 
-                        <!-- reminders & followups -->
+                        <!-- View Transaction Details -->
                         <section class="mb-5">
-                            <h4 class="border-start border-3 border-warning ps-2 mb-md-5">Finance</h4>
+                            <h4 class="border-start border-3 border-warning ps-2 mb-md-5">College Enrollments</h4>
                             <div class="table-responsive">
                                 <table class="table border bg-white">
                                     <thead class="bg-info">
                                         <tr>
-                                            <th class="text-nowrap">Sr.No.</th>
-                                            <th class="text-nowrap">Client Name</th>
-                                            <th class="text-nowrap">Transaction Name</th>
-                                            <th class="text-nowrap">Paid Date</th>
-                                            <th class="text-nowrap">Balance</th>
-                                            <th class="text-nowrap">Pending Balance</th>
+                                            <th class="text-nowrap">Sr.No</th>
+                                            <th class="text-nowrap">College Name</th>
+                                            <th class="text-nowrap">Enrollments</th>
                                             <th class="text-nowrap">Action</th>
                                         </tr>
                                     </thead>
@@ -255,114 +252,17 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>Kamini</td>
-                                            <td>Manmir Singh Bawa</td>
-                                            <td>06-02-2023</td>
-                                            <td>$2300</td>
-                                            <td>$300</td>
-                                            <td class="text-center">
-                                                <button class="btn px-0" type="button" data-bs-toggle="modal"
-                                                    data-bs-target="#transactionModal"><img
-                                                        src="../../assets/icons/plus.svg" alt=""
-                                                        class="img-fluid"></button>
-
-
-                                                <!-- modal -->
-                                                <div class="modal fade" id="transactionModal" tabindex="-1"
-                                                    aria-labelledby="transactionModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog modal-lg">
-                                                        <div class="modal-content border-0">
-                                                            <div class="modal-header bg-alice-blue border-0">
-                                                                <h1 class="modal-title fs-5 fw-bold"
-                                                                    id="transactionModalLabel">Add
-                                                                    Transaction</h1>
-                                                                <button type="button" class="btn-close"
-                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
-                                                            </div>
-                                                            <div class="modal-body my-4 border-0">
-                                                                <form action="#" method="post">
-                                                                    <div class="row">
-                                                                        <div class="col-12">
-                                                                            <div class="mb-3">
-                                                                                <label for=""
-                                                                                    class="form-label">Transaction
-                                                                                    Name</label>
-                                                                                <input type="text"
-                                                                                    class="form-control p-3 rounded border-3"
-                                                                                    placeholder="Enter Transaction Name">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <div class="mb-3">
-                                                                                <label for="" class="form-label">Total
-                                                                                    Amount ($)</label>
-                                                                                <input type="text"
-                                                                                    class="form-control p-3 rounded border-3"
-                                                                                    placeholder="Enter Total Amount">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <div class="mb-3">
-                                                                                <label for="" class="form-label">Pending
-                                                                                    Amount ($)</label>
-                                                                                <input type="text"
-                                                                                    class="form-control bg-light p-3 rounded border-3"
-                                                                                    placeholder="">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <div class="mb-3">
-                                                                                <label for="" class="form-label">Deposit
-                                                                                    Amount ($)</label>
-                                                                                <input type="text"
-                                                                                    class="form-control p-3 rounded border-3"
-                                                                                    placeholder="Enter Deposit Amount">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <div class="mb-3">
-                                                                                <label for="" class="form-label">Pay
-                                                                                    Date</label>
-                                                                                <input type="date"
-                                                                                    class="form-control p-3 rounded border-3"
-                                                                                    placeholder="">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <div class="mb-3">
-                                                                                <label for="" class="form-label">Next
-                                                                                    Pending Date</label>
-                                                                                <input type="date"
-                                                                                    class="form-control p-3 rounded border-3"
-                                                                                    placeholder="">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </form>
-                                                            </div>
-                                                            <div class="modal-footer border-0 justify-content-start">
-                                                                <div class="mb-3">
-                                                                    <button type="button"
-                                                                        class="btn btn-primary p-3 rounded">Add
-                                                                        to list</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <a href="./view-transactions.html" class="btn px-0"><img
-                                                        src="../../assets/icons/eye.svg" alt="" class="img-fluid"></a>
-                                                <button class="btn px-0"><img src="../../assets/icons/trash.svg" alt=""
-                                                        class="img-fluid"></button>
+                                            <td>Holmes College</td>
+                                            <td class="">1</td>
+                                            <td class="">
+                                                <a href="./college-details.html" class="btn px-0"><img src="../../assets/icons/eye.svg" alt=""
+                                                        class="img-fluid"></a>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </section>
-
                     </div>
                 </div>
             </div>
