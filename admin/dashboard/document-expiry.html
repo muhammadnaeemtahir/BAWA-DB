@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Document Expiry</title>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid bg-alice-blue g-0">
+        <!-- sidenav mobile -->
+        <nav class="navbar d-md-none d-block">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Welcome, Amann Jhamb</a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <img src="../../assets/logos/logo.svg" alt="" class="img-fluid">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./index.html">
+                                    <img src="../../assets/icons/home.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Dashboard</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./contacts.html">
+                                    <img src="../../assets/icons/users.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Contacts</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./permissions.html">
+                                    <img src="../../assets/icons/target.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Permissions</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./services.html">
+                                    <img src="../../assets/icons/settings.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Services</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./roles.html">
+                                    <img src="../../assets/icons/user.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Roles</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./visas.html">
+                                    <img src="../../assets/icons/file.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Visas</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./users.html">
+                                    <img src="../../assets/icons/user-check.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Users</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./college-and-institutes.html">
+                                    <img src="../../assets/icons/book-open.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">College/ Institutes</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./appointments.html">
+                                    <img src="../../assets/icons/calendar.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Appointments</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./document-expiry.html">
+                                    <img src="../../assets/icons/x-circle.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Document Expiry</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./college-enrollments.html">
+                                    <img src="../../assets/icons/file-plus.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">College Enrollments</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./reminders-and-followups.html">
+                                    <img src="../../assets/icons/bell.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Reminders/ Followups</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./finances.html">
+                                    <img src="../../assets/icons/dollar-sign.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Finance</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-0" href="./refferals.html">
+                                    <img src="../../assets/icons/refresh-cw.svg" alt="" class="img-fluid me-2">
+                                    <span class="align-bottom">Referrals</span></a>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="">
+                            <button class="btn btn-outline-dark w-100 fw-bold">Logout <img
+                                    src="../../assets/icons/power.svg" alt="" class="img-fluid"></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row g-0">
+
+
+            <!-- sidenav -->
+            <div class="col-md-3 d-md-block d-none">
+                <div class="p-4 bg-white h-100">
+                    <aside>
+                        <nav class="row g-0 sidenav">
+                            <div class="col-12">
+                                <div class="mb-5">
+                                    <a href="./index.html">
+                                        <img src="../../assets/logos/logo.svg" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <ul class="nav flex-column mb-5">
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./index.html">
+                                            <img src="../../assets/icons/home.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Dashboard</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./contacts.html">
+                                            <img src="../../assets/icons/users.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Contacts</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./permissions.html">
+                                            <img src="../../assets/icons/target.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Permissions</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./services.html">
+                                            <img src="../../assets/icons/settings.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Services</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./roles.html">
+                                            <img src="../../assets/icons/user.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Roles</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./visas.html">
+                                            <img src="../../assets/icons/file.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Visas</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./users.html">
+                                            <img src="../../assets/icons/user-check.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Users</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./college-and-institutes.html">
+                                            <img src="../../assets/icons/book-open.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">College/ Institutes</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./appointments.html">
+                                            <img src="../../assets/icons/calendar.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Appointments</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./document-expiry.html">
+                                            <img src="../../assets/icons/x-circle.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Document Expiry</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./college-enrollments.html">
+                                            <img src="../../assets/icons/file-plus.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">College Enrollments</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./reminders-and-followups.html">
+                                            <img src="../../assets/icons/bell.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Reminders/ Followups</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0 active" href="./finances.html">
+                                            <img src="../../assets/icons/dollar-sign.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Finance</span></a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="nav-link px-0" href="./refferals.html">
+                                            <img src="../../assets/icons/refresh-cw.svg" alt="" class="img-fluid me-2">
+                                            <span class="align-bottom">Referrals</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </aside>
+                </div>
+            </div>
+
+
+            <!-- content -->
+            <div class="col-md-9">
+                <div class="p-md-5 p-3 h-100">
+                    <div class="content-header mb-5">
+
+                        <div class="d-md-block d-none">
+                            <div class="row mb-3">
+                                <div class="col-9">
+                                    <h3>Welcome, Amann Jhamb!</h3>
+                                </div>
+                                <div class="col-3">
+                                    <div class="text-end">
+                                        <button class="btn fw-bold">Logout <img src="../../assets/icons/power.svg"
+                                                alt="" class="img-fluid"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="content-body">
+
+                        <!-- reminders & followups -->
+                        <section class="mb-5">
+                            <div class="row align-items-center">
+                                <div class="col-md-7">
+                                    <h4 class="border-start border-3 border-warning ps-2 mb-md-5">Document Expiry</h4>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Search Expiry</label>
+                                        <input type="search" name="" class="form-control p-3 rounded border-3"
+                                            placeholder="Enter Name, Email, Mobile" id="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- nav tabs -->
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link fw-bold active" id="pills-Al-Expiry-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-Al-Expiry" type="button" role="tab"
+                                        aria-controls="pills-Al-Expiry" aria-selected="true">Al Expiry</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link fw-bold" id="pills-visa-expiry-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-visa-expiry" type="button" role="tab"
+                                        aria-controls="pills-visa-expiry" aria-selected="false">Visa Expiry</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link fw-bold" id="pills-IELTS-expiry-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-IELTS-expiry" type="button" role="tab"
+                                        aria-controls="pills-IELTS-expiry" aria-selected="false">IELTS Expiry</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link fw-bold" id="pills-NAATI-expiry-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-NAATI-expiry" type="button" role="tab"
+                                        aria-controls="pills-NAATI-expiry" aria-selected="false">NAATI Expiry</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link fw-bold" id="pills-Skill-Assessment-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-Skill-Assessment" type="button"
+                                        role="tab" aria-controls="pills-Skill-Assessment" aria-selected="false">Skill
+                                        Assessment</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link fw-bold" id="pills-Professional-Year-Expiry-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-Professional-Year-Expiry"
+                                        type="button" role="tab" aria-controls="pills-Professional-Year-Expiry"
+                                        aria-selected="false">Professional Year Expiry</button>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-Al-Expiry" role="tabpanel"
+                                    aria-labelledby="pills-Al-Expiry-tab" tabindex="0">
+                                    <div class="table-responsive">
+                                        <table class="table bg-white">
+                                            <thead class="bg-info">
+                                                <th>Sr.No.</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Mobile</th>
+                                                <th>Visa Type</th>
+                                                <th>Expiry Date</th>
+                                                <th>Action</th>
+                                            </thead>
+                                            <tbody>
+                                            <tbody>
+                                                <td>1</td>
+                                                <td>Kamini</td>
+                                                <td>name@email.com</td>
+                                                <td>23456789</td>
+                                                <td>Bridging E - 50</td>
+                                                <td>28-12-2022</td>
+                                                <td>
+                                                    <a href="./user-details.html" class="btn">
+                                                        <img src="../../assets/icons/eye.svg" class="img-fluid" alt="">
+                                                    </a>
+                                                </td>
+                                            </tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-visa-expiry" role="tabpanel"
+                                    aria-labelledby="pills-visa-expiry-tab" tabindex="0">
+                                    <div class="table-responsive">
+                                        <table class="table bg-white">
+                                            <thead class="bg-info">
+                                                <th>Sr.No.</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Mobile</th>
+                                                <th>Visa Type</th>
+                                                <th>Expiry Date</th>
+                                                <th>Action</th>
+                                            </thead>
+                                            <tbody>
+                                            <tbody>
+                                                <td>1</td>
+                                                <td>Kamini</td>
+                                                <td>name@email.com</td>
+                                                <td>23456789</td>
+                                                <td>Bridging E - 50</td>
+                                                <td>28-12-2022</td>
+                                                <td>
+                                                    <a href="./user-details.html" class="btn">
+                                                        <img src="../../assets/icons/eye.svg" class="img-fluid" alt="">
+                                                    </a>
+                                                </td>
+                                            </tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-IELTS-expiry" role="tabpanel"
+                                    aria-labelledby="pills-IELTS-expiry-tab" tabindex="0">
+                                    <div class="table-responsive">
+                                        <table class="table bg-white">
+                                            <thead class="bg-info">
+                                                <th>Sr.No.</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Mobile</th>
+                                                <th>Visa Type</th>
+                                                <th>Expiry Date</th>
+                                                <th>Action</th>
+                                            </thead>
+                                            <tbody>
+                                            <tbody>
+                                                <td>1</td>
+                                                <td>Kamini</td>
+                                                <td>name@email.com</td>
+                                                <td>23456789</td>
+                                                <td>Bridging E - 50</td>
+                                                <td>28-12-2022</td>
+                                                <td>
+                                                    <a href="./user-details.html" class="btn">
+                                                        <img src="../../assets/icons/eye.svg" class="img-fluid" alt="">
+                                                    </a>
+                                                </td>
+                                            </tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="pills-NAATI-expiry" role="tabpanel"
+                                    aria-labelledby="pills-NAATI-expiry-tab" tabindex="0">
+                                    <div class="table-responsive">
+                                        <table class="table bg-white">
+                                            <thead class="bg-info">
+                                                <th>Sr.No.</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Mobile</th>
+                                                <th>Visa Type</th>
+                                                <th>Expiry Date</th>
+                                                <th>Action</th>
+                                            </thead>
+                                            <tbody>
+                                            <tbody>
+                                                <td>1</td>
+                                                <td>Kamini</td>
+                                                <td>name@email.com</td>
+                                                <td>23456789</td>
+                                                <td>Bridging E - 50</td>
+                                                <td>28-12-2022</td>
+                                                <td>
+                                                    <a href="./user-details.html" class="btn">
+                                                        <img src="../../assets/icons/eye.svg" class="img-fluid" alt="">
+                                                    </a>
+                                                </td>
+                                            </tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="pills-Skill-Assessment" role="tabpanel"
+                                    aria-labelledby="pills-Skill-Assessment-tab" tabindex="0">
+                                    <div class="table-responsive">
+                                        <table class="table bg-white">
+                                            <thead class="bg-info">
+                                                <th>Sr.No.</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Mobile</th>
+                                                <th>Visa Type</th>
+                                                <th>Expiry Date</th>
+                                                <th>Action</th>
+                                            </thead>
+                                            <tbody>
+                                            <tbody>
+                                                <td>1</td>
+                                                <td>Kamini</td>
+                                                <td>name@email.com</td>
+                                                <td>23456789</td>
+                                                <td>Bridging E - 50</td>
+                                                <td>28-12-2022</td>
+                                                <td>
+                                                    <a href="./user-details.html" class="btn">
+                                                        <img src="../../assets/icons/eye.svg" class="img-fluid" alt="">
+                                                    </a>
+                                                </td>
+                                            </tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="pills-Professional-Year-Expiry" role="tabpanel"
+                                    aria-labelledby="pills-Professional-Year-Expiry-tab" tabindex="0">
+                                    <div class="table-responsive">
+                                        <table class="table bg-white">
+                                            <thead class="bg-info">
+                                                <th>Sr.No.</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Mobile</th>
+                                                <th>Visa Type</th>
+                                                <th>Expiry Date</th>
+                                                <th>Action</th>
+                                            </thead>
+                                            <tbody>
+                                            <tbody>
+                                                <td>1</td>
+                                                <td>Kamini</td>
+                                                <td>name@email.com</td>
+                                                <td>23456789</td>
+                                                <td>Bridging E - 50</td>
+                                                <td>28-12-2022</td>
+                                                <td>
+                                                    <a href="./user-details.html" class="btn">
+                                                        <img src="../../assets/icons/eye.svg" class="img-fluid" alt="">
+                                                    </a>
+                                                </td>
+                                            </tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
